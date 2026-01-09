@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lisa - AI Voice Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="avatar-container">
+                <img src="/static/cute-lisa.png" alt="Lisa" class="avatar">
+                <div class="avatar-glow"></div>
+            </div>
+            <h1>Lisa</h1>
+            <p class="subtitle">Your AI Voice Assistant</p>
+        </header>
+        
+        <div class="chat-container" id="chatContainer">
+            <div class="message lisa-message">
+                <div class="message-content">
+                    Hello! I'm Lisa, your AI assistant. You can type or click the microphone to speak with me. How can I help you today?
+                </div>
+            </div>
+        </div>
+        
+        <div class="input-container">
+            <button class="voice-btn" id="voiceBtn" title="Click to speak">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                    <line x1="12" x2="12" y1="19" y2="22"></line>
+                </svg>
+            </button>
+            <input type="text" id="messageInput" placeholder="Type your message or click the mic to speak..." autocomplete="off">
+            <button class="send-btn" id="sendBtn" title="Send message">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m22 2-7 20-4-9-9-4Z"></path>
+                    <path d="M22 2 11 13"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="controls">
+            <button class="control-btn" id="clearBtn">Clear Chat</button>
+            <label class="toggle-container">
+                <input type="checkbox" id="voiceOutput" checked>
+                <span class="toggle-label">Voice Output</span>
+            </label>
+        </div>
+        
+        <div class="status" id="status"></div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>
